@@ -1,0 +1,48 @@
+<!--
+
+ A simple syntax highlighter in the style of Chromium's view-source.
+
+ Usage: view-source.html?n=[Name]&i=[Favicon]&m=[MIME type]&c=[Content]
+
+ Copyright (c) 2011 Juho Nurminen
+
+ This software is provided 'as-is', without any express or implied
+ warranty. In no event will the authors be held liable for any damages
+ arising from the use of this software.
+
+ Permission is granted to anyone to use this software for any purpose,
+ including commercial applications, and to alter it and redistribute it
+ freely, subject to the following restrictions:
+
+    1. The origin of this software must not be misrepresented; you must not
+    claim that you wrote the original software. If you use this software
+    in a product, an acknowledgment in the product documentation would be
+    appreciated but is not required.
+
+    2. Altered source versions must be plainly marked as such, and must not be
+    misrepresented as being the original software.
+
+    3. This notice may not be removed or altered from any source
+    distribution.
+
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>view-source</title>
+		<script type="text/javascript" src="view-source.js"></script>
+		<style type="text/css">
+			html, body, iframe {
+				display: block;
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				border: none;
+			}
+		</style>
+	</head>
+	<body>
+		<iframe sandbox="allow-same-origin"></iframe>

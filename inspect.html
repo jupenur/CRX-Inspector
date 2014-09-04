@@ -1,0 +1,146 @@
+<!--
+
+ Copyright (c) 2011 Juho Nurminen
+
+ This software is provided 'as-is', without any express or implied
+ warranty. In no event will the authors be held liable for any damages
+ arising from the use of this software.
+
+ Permission is granted to anyone to use this software for any purpose,
+ including commercial applications, and to alter it and redistribute it
+ freely, subject to the following restrictions:
+
+    1. The origin of this software must not be misrepresented; you must not
+    claim that you wrote the original software. If you use this software
+    in a product, an acknowledgment in the product documentation would be
+    appreciated but is not required.
+
+    2. Altered source versions must be plainly marked as such, and must not be
+    misrepresented as being the original software.
+
+    3. This notice may not be removed or altered from any source
+    distribution.
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>CRX Inspector</title>
+<style type="text/css">
+
+	* {
+		padding: 0;
+		margin: 0;
+		border: none 0px #000;
+		box-sizing: border-box;
+	}
+
+	html, body {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	nav {
+		display: block;
+		float: left;
+		height: 100%;
+		overflow: auto;
+		border-right: solid 1px #BBB;
+		padding: 5px;
+	}
+
+	body>div {
+		height: 100%;
+		overflow: hidden;
+	}
+
+	iframe {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	a {
+		display: block;
+		color: #000;
+		font: -webkit-small-control;
+		text-decoration: none;
+		padding: 2px 5px;
+		border-radius: 2px;
+		overflow: hidden;
+		cursor: pointer;
+	}
+
+	a#name {
+		cursor: default;
+	}
+
+	a.inviewer {
+		font-weight: bold;
+	}
+
+	a:hover {
+		background: #F0F0F0;
+	}
+
+	a.open, a.closed {
+		margin-left: -.5em;
+		padding-left: .9em;
+	}
+
+	a.open::before {
+		content: '-';
+		display: block;
+		float: left;
+		width: 1em;
+		height: 0;
+		position: relative;
+		right: 1em;
+		text-align: center;
+	}
+
+	a.closed::before {
+		content: '+';
+		display: block;
+		float: left;
+		width: 1em;
+		height: 0;
+		position: relative;
+		right: 1em;
+		text-align: center;
+	}
+
+	a>div {
+		float: right;
+		margin-left: 2em;
+	}
+
+	ul {
+		margin: 0 0 0 10px;
+		border-left: dotted 1px #000;
+		padding: 0 0 0 10px;
+	}
+
+	li {
+		list-style-type: none;
+	}
+
+	li>a+ul {
+		display: none;
+	}
+
+</style>
+<script type="text/javascript" src="jsunzip.js"></script>
+<script type="text/javascript" src="inspect.js"></script>
+</head>
+<body>
+	<nav>
+		<a id="name"></a>
+		<ul id="list"></ul>
+	</nav>
+	<div>
+		<iframe></iframe>
+	</div>
